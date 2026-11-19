@@ -8,15 +8,12 @@ export const ProblemSolution: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-xs font-semibold text-[#0062FF] uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full border border-blue-200/60">
-            Masalah Nyata Siswa
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight mt-3">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
             Kondisi tugas berubah-ubah. <br />
             Belajar butuh kepastian prioritas.
           </h2>
           <p className="text-sm sm:text-base text-[#64748B] mt-3 leading-relaxed">
-            Bukan karena malas—siswa sering panik karena tidak tahu harus mulai dari tugas mana, materi apa yang akan diujikan, dan bagaimana membagi waktu secara sehat.
+            Bukan karena malas: siswa sering panik karena tidak tahu harus mulai dari tugas mana, materi apa yang akan diujikan, dan bagaimana membagi waktu secara sehat.
           </p>
         </div>
 

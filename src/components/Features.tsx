@@ -64,10 +64,7 @@ export const Features: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-xl">
-            <span className="text-xs font-semibold text-[#0062FF] uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full border border-blue-200/60">
-              5 Pilar Fitur Stoodify
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight mt-3">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
               Dirancang khusus untuk cara belajar siswa masa kini.
             </h2>
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Download, Sparkles, ShieldCheck, Zap, ArrowRight, Smartphone } from 'lucide-react';
-import { DeviceSimulator } from './DeviceSimulator';
+import { DualPhoneMockup } from './DualPhoneMockup';
 
 export const Hero: React.FC = () => {
   return (
@@ -8,14 +8,8 @@ export const Hero: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Left Column: Persuasive Value Proposition */}
-          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            {/* Inkubasi Exhibition Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50/90 border border-blue-200/70 shadow-sm text-xs font-semibold text-[#0062FF]">
-              <span className="w-2 h-2 rounded-full bg-[#0062FF] animate-pulse"></span>
-              Pameran Karya Inkubasi Siswa · SMK Telkom Sidoarjo
-            </div>
-
+          {/* Left Column: Direct & Punchy Value Proposition */}
+          <div className="lg:col-span-6 space-y-6 text-center lg:text-left">
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0F172A] tracking-tight leading-[1.14]">
               Belajar Efektif <br className="hidden sm:inline" />
@@ -32,9 +26,9 @@ export const Hero: React.FC = () => {
               Bareng Stoodify.
             </h1>
 
-            {/* Subheading */}
+            {/* Subheading: Clean, human, no em dashes */}
             <p className="text-base sm:text-lg text-[#475569] max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-              Asisten belajar pintar berbasis AI yang menyusun jadwal sekolah terintegrasi, memprioritaskan tugas mendesak, dan memprediksi materi yang akan datang—semuanya dalam satu genggaman.
+              Asisten belajar pintar berbasis AI yang menyusun jadwal sekolah terintegrasi, memprioritaskan tugas mendesak, dan memprediksi materi yang akan datang: semuanya dalam satu genggaman.
             </p>
 
             {/* CTA Buttons */}
@@ -93,9 +87,9 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Live Interactive Device Frame */}
-          <div id="demo" className="lg:col-span-5 flex justify-center scroll-mt-24">
-            <DeviceSimulator />
+          {/* Right Column: Dual Phone Showcase (Left Angled, Right Front) */}
+          <div id="demo" className="lg:col-span-6 flex justify-center scroll-mt-24">
+            <DualPhoneMockup />
           </div>
 
         </div>

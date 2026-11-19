@@ -22,8 +22,8 @@ export const DownloadSection: React.FC = () => {
             
             {/* Left Column: Download Info */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full border border-white/20 text-xs font-semibold text-blue-300">
-                <Smartphone className="w-3.5 h-3.5" />
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-xs font-semibold text-blue-300 tracking-wide uppercase">
+                <Smartphone className="w-3.5 h-3.5 text-blue-400" />
                 Rilis Resmi APK Android · v1.1.0
               </div>
 
