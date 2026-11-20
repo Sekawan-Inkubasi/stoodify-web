@@ -27,25 +27,27 @@ export const HowItWorks: React.FC = () => {
     <section id="cara-kerja" className="py-20 md:py-28 bg-white border-b border-slate-200/80 scroll-mt-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
-        {/* Section Header (Inspired by Satria App) */}
-        <div className="mb-14">
+        {/* Section Header */}
+        <div className="mb-8 sm:mb-14 reveal-init">
           <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.14em] text-[#64748B] block mb-2">
             ALUR KERJA STOODIFY
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
             Alur yang mudah diikuti.
           </h2>
-          <p className="text-sm sm:text-base text-[#475569] mt-2 max-w-xl">
+          <p className="text-xs sm:text-base text-[#475569] mt-2 max-w-xl">
             Tiga tahapan sederhana dari awal semester hingga masa ujian agar ritme belajarmu selalu terkendali.
           </p>
         </div>
 
         {/* 3 Steps Minimalist Process Grid with Hairline Borders */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
-          {steps.map((step) => (
+          {steps.map((step, idx) => (
             <div
               key={step.number}
-              className="border-t border-[#CBD5E1] pt-5 sm:pt-6 flex flex-col justify-between group"
+              className={`border-t border-[#CBD5E1] pt-4 sm:pt-6 flex flex-col justify-between group reveal-init ${
+                idx === 0 ? 'reveal-delay-100' : idx === 1 ? 'reveal-delay-200' : 'reveal-delay-300'
+              }`}
             >
               <div>
                 <span className="text-xs font-bold text-[#0062FF] font-mono tracking-wider block mb-2">
@@ -68,7 +70,7 @@ export const HowItWorks: React.FC = () => {
         </div>
 
         {/* Banner Quick Link to Simulator */}
-        <div className="mt-14 p-6 rounded-2xl bg-slate-50 border border-slate-200/70 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-14 p-6 rounded-2xl bg-slate-50 border border-slate-200/70 flex flex-col sm:flex-row items-center justify-between gap-4 reveal-init reveal-delay-200">
           <div className="text-center sm:text-left">
             <h4 className="text-sm font-bold text-[#0F172A]">Ingin merasakan alur ini langsung?</h4>
             <p className="text-xs text-[#64748B] mt-0.5">Kamu bisa mencoba mencentang tugas dan menyalakan timer fokus di simulator di atas.</p>

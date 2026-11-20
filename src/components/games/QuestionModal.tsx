@@ -108,7 +108,7 @@ export const QuestionModal: React.FC<QuestionModalProps> = ({
   const optionLabels = ['A', 'B', 'C', 'D'];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/60 backdrop-blur-md select-none animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-900/60 backdrop-blur-md select-none animate-in fade-in duration-200">
       
       {/* Confetti canvas overlay */}
       <canvas
@@ -118,43 +118,43 @@ export const QuestionModal: React.FC<QuestionModalProps> = ({
 
       {/* Main Card Modal */}
       <div 
-        className={`relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-slate-200/90 overflow-hidden flex flex-col transition-all duration-300 ${
+        className={`relative w-full max-w-2xl max-h-[92dvh] bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-200/90 overflow-hidden flex flex-col transition-all duration-300 ${
           isSubmitted && !isCorrect ? 'animate-quiz-shake border-rose-300 ring-2 ring-rose-200' : ''
         }`}
       >
         
         {/* Modal Header: Question # and Category */}
-        <div className="px-6 py-4 bg-slate-50 border-b border-slate-200/80 flex items-center justify-between text-xs">
+        <div className="shrink-0 px-4 sm:px-6 py-3 sm:py-4 bg-slate-50 border-b border-slate-200/80 flex items-center justify-between text-xs">
           <div className="flex items-center gap-2">
-            <span className="px-3 py-1 rounded-full bg-[#0062FF] text-white font-black tracking-wider text-[11px]">
+            <span className="px-2.5 sm:px-3 py-1 rounded-full bg-[#0062FF] text-white font-black tracking-wider text-[10px] sm:text-[11px]">
               SOAL #{questionNumber}
             </span>
-            <span className="px-2.5 py-0.5 rounded-full bg-slate-200/80 text-slate-700 font-semibold text-[10px]">
+            <span className="px-2 sm:px-2.5 py-0.5 rounded-full bg-slate-200/80 text-slate-700 font-semibold text-[10px]">
               {question.category}
             </span>
           </div>
 
           <button
             onClick={onFinish}
-            className="p-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-200/60 transition-colors cursor-pointer"
+            className="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-200/60 transition-colors cursor-pointer"
             title="Tutup"
           >
             <X className="w-4 h-4" />
           </button>
         </div>
 
-        {/* Modal Body: Question text & 4 Options */}
-        <div className="p-6 sm:p-8 space-y-6">
+        {/* Modal Body: Question text & 4 Options (Scrollable on small mobile screens) */}
+        <div className="flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6 sm:p-8 space-y-4 sm:space-y-6">
           
           {/* Question Text */}
           <div>
-            <h3 className="text-lg sm:text-xl font-bold text-[#0F172A] leading-relaxed">
+            <h3 className="text-base sm:text-lg sm:text-xl font-bold text-[#0F172A] leading-snug sm:leading-relaxed">
               {question.question}
             </h3>
           </div>
 
           {/* 4 Options Grid (A, B, C, D) */}
-          <div className="grid grid-cols-1 gap-3">
+          <div className="grid grid-cols-1 gap-2.5 sm:gap-3">
             {question.options.map((opt, idx) => {
               const isSelected = selectedOption === idx;
               const isOptionCorrect = idx === question.correctIndex;
@@ -180,15 +180,15 @@ export const QuestionModal: React.FC<QuestionModalProps> = ({
                   key={idx}
                   onClick={() => handleSelectOption(idx)}
                   disabled={isSubmitted}
-                  className={`w-full p-4 rounded-2xl border-2 text-left transition-all duration-150 flex items-center justify-between group ${btnStyle} ${
+                  className={`w-full p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 text-left transition-all duration-150 flex items-center justify-between group ${btnStyle} ${
                     !isSubmitted ? 'cursor-pointer hover:scale-[1.01]' : 'cursor-default'
                   }`}
                 >
-                  <div className="flex items-center gap-3.5">
-                    <span className={`w-8 h-8 rounded-xl flex items-center justify-center font-bold text-xs border ${badgeStyle} shrink-0`}>
+                  <div className="flex items-center gap-3">
+                    <span className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl flex items-center justify-center font-bold text-xs border ${badgeStyle} shrink-0`}>
                       {optionLabels[idx]}
                     </span>
-                    <span className="text-sm sm:text-base font-medium">
+                    <span className="text-xs sm:text-base font-medium leading-snug">
                       {opt}
                     </span>
                   </div>
@@ -206,29 +206,29 @@ export const QuestionModal: React.FC<QuestionModalProps> = ({
 
           {/* Feedback Banner */}
           {isSubmitted && (
-            <div className={`p-4 rounded-2xl border transition-all duration-300 ${
+            <div className={`p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border transition-all duration-300 ${
               isCorrect
                 ? 'bg-emerald-50 border-emerald-200 text-emerald-950'
                 : 'bg-rose-50 border-rose-200 text-rose-950'
             }`}>
               <div className="flex items-start gap-3">
                 {isCorrect ? (
-                  <div className="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 animate-quiz-pop">
-                    <CheckCircle2 className="w-6 h-6" />
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 animate-quiz-pop">
+                    <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                 ) : (
-                  <div className="w-9 h-9 rounded-xl bg-rose-600 text-white flex items-center justify-center shrink-0 animate-quiz-pop">
-                    <XCircle className="w-6 h-6" />
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-rose-600 text-white flex items-center justify-center shrink-0 animate-quiz-pop">
+                    <XCircle className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                 )}
 
                 <div className="flex-1">
-                  <h4 className="text-sm font-bold">
+                  <h4 className="text-xs sm:text-sm font-bold">
                     {isCorrect ? 'Jawaban kamu benar!' : 'Oops! Jawaban kamu belum tepat.'}
                   </h4>
                   
                   {question.explanation && (
-                    <p className="text-xs text-slate-700 mt-1.5 leading-relaxed">
+                    <p className="text-[11px] sm:text-xs text-slate-700 mt-1 leading-relaxed">
                       <strong>Penjelasan:</strong> {question.explanation}
                     </p>
                   )}
@@ -241,10 +241,10 @@ export const QuestionModal: React.FC<QuestionModalProps> = ({
 
         {/* Modal Footer: Selesai Button */}
         {isSubmitted && (
-          <div className="px-6 py-4 bg-slate-50 border-t border-slate-200 flex justify-end">
+          <div className="shrink-0 px-4 sm:px-6 py-3 sm:py-4 bg-slate-50 border-t border-slate-200 flex justify-end">
             <button
               onClick={onFinish}
-              className="px-8 py-3 rounded-xl bg-[#0062FF] hover:bg-[#0052D9] text-white font-bold text-sm shadow-md transition-all flex items-center gap-2 cursor-pointer hover:scale-105 active:scale-95"
+              className="w-full sm:w-auto justify-center px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl bg-[#0062FF] hover:bg-[#0052D9] text-white font-bold text-xs sm:text-sm shadow-md transition-all flex items-center gap-2 cursor-pointer hover:scale-105 active:scale-95"
             >
               <Check className="w-4 h-4" />
               <span>Selesai</span>

@@ -276,8 +276,8 @@ export const SpinWheel: React.FC<SpinWheelProps> = ({
         {/* Subtle Ambient Glow */}
         <div className="absolute w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-        {/* Canvas Wheel */}
-        <div className="relative w-[320px] h-[320px] sm:w-[440px] sm:h-[440px] md:w-[480px] md:h-[480px] flex items-center justify-center">
+        {/* Canvas Wheel with fluid mobile dimensions */}
+        <div className="relative w-[min(290px,84vw)] h-[min(290px,84vw)] sm:w-[440px] sm:h-[440px] md:w-[480px] md:h-[480px] flex items-center justify-center shrink-0">
           <canvas
             ref={canvasRef}
             style={{ width: '100%', height: '100%' }}
@@ -287,33 +287,33 @@ export const SpinWheel: React.FC<SpinWheelProps> = ({
 
         {/* Selected Number Banner Highlight (When Stopped) */}
         {selectedNumberDisplay && !isSpinning && (
-          <div className="mt-4 px-5 py-2 bg-blue-50 border border-blue-200 rounded-full text-sm font-bold text-[#0062FF] flex items-center gap-2 animate-bounce">
+          <div className="mt-4 px-4 sm:px-5 py-1.5 sm:py-2 bg-blue-50 border border-blue-200 rounded-full text-xs sm:text-sm font-bold text-[#0062FF] flex items-center gap-2 animate-bounce">
             <Sparkles className="w-4 h-4" />
             Nomor Terpilih: #{selectedNumberDisplay}
           </div>
         )}
 
         {/* Wheel Action Area */}
-        <div className="mt-6 flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
+        <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full justify-center">
           
           {/* Main SPIN Button */}
           <button
             onClick={startSpin}
             disabled={isSpinning}
-            className={`px-10 py-4 rounded-2xl font-black text-lg tracking-wider transition-all duration-200 shadow-xl flex items-center gap-3 cursor-pointer ${
+            className={`w-full max-w-xs sm:w-auto px-8 py-3.5 sm:px-10 sm:py-4 rounded-xl sm:rounded-2xl font-black text-base sm:text-lg tracking-wider transition-all duration-200 shadow-xl flex items-center justify-center gap-2.5 sm:gap-3 cursor-pointer ${
               isSpinning
                 ? 'bg-slate-300 text-slate-500 cursor-not-allowed scale-95 shadow-none'
                 : 'bg-[#0062FF] hover:bg-[#0052D9] text-white hover:scale-105 active:scale-95 shadow-[0_8px_25px_rgba(0,98,255,0.4)]'
             }`}
           >
             <Play className={`w-5 h-5 fill-current ${isSpinning ? 'animate-spin' : ''}`} />
-            {isSpinning ? 'RODA BERPUTAR...' : 'PUTAR RODA (SPIN)'}
+            <span>{isSpinning ? 'RODA BERPUTAR...' : 'PUTAR RODA (SPIN)'}</span>
           </button>
 
-          {/* Sound Toggle Button */}
+          {/* Sound Toggle Button (Desktop only, mobile has it in header) */}
           <button
             onClick={() => setSoundEnabled(!soundEnabled)}
-            className="p-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 hover:text-[#0062FF] shadow-xs transition-all cursor-pointer flex items-center gap-2 text-xs font-semibold"
+            className="hidden sm:flex p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 hover:text-[#0062FF] shadow-xs transition-all cursor-pointer items-center gap-2 text-xs font-semibold"
             title={soundEnabled ? 'Matikan Suara' : 'Nyalakan Suara'}
           >
             {soundEnabled ? (

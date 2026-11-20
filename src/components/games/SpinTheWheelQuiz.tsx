@@ -48,9 +48,10 @@ export const SpinTheWheelQuiz: React.FC<SpinTheWheelQuizProps> = ({ onBackToHome
           <div className="flex items-center gap-3">
             <button
               onClick={onBackToHome}
-              className="px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
+              className="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
+              <span className="sm:hidden">Beranda</span>
               <span className="hidden sm:inline">Kembali ke Beranda</span>
             </button>
 

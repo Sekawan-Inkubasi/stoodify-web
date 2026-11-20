@@ -62,26 +62,27 @@ export const Features: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 gap-4 sm:gap-6 reveal-init">
           <div className="max-w-xl">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
               Dirancang khusus untuk cara belajar siswa masa kini.
             </h2>
           </div>
-          <p className="text-sm text-[#64748B] max-w-sm leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#64748B] max-w-sm leading-relaxed">
             Setiap fitur dibangun dengan satu tujuan: meringankan beban mental siswa agar belajar kembali menyenangkan dan berbuah prestasi nyata.
           </p>
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {featureList.map((item, idx) => {
             const Icon = item.icon;
             const isWide = idx === 0 || idx === 3; // layout rhythm
+            const delayClass = idx === 0 ? 'reveal-delay-100' : idx === 1 ? 'reveal-delay-150' : idx === 2 ? 'reveal-delay-200' : idx === 3 ? 'reveal-delay-250' : 'reveal-delay-300';
             return (
               <div
                 key={item.id}
-                className={`bg-white rounded-3xl p-7 border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group ${
+                className={`bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group reveal-init ${delayClass} ${
                   isWide ? 'lg:col-span-1' : ''
                 }`}
               >

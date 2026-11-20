@@ -61,9 +61,8 @@ export const DualPhoneMockup: React.FC = () => {
       <div className="relative flex items-center justify-center">
 
         {/* ======================================================== */}
-        {/* PHONE 1: LEFT PHONE (Angled / Serong Kiri - Daftar Tugas) */}
-        {/* ======================================================== */}
-        <div className="hidden sm:flex flex-col w-[250px] md:w-[270px] h-[520px] md:h-[550px] bg-white rounded-[38px] border-[7px] border-slate-900 shadow-xl overflow-hidden transform -rotate-6 translate-x-6 sm:translate-x-8 translate-y-3 hover:-rotate-3 transition-transform duration-300 z-0">
+        {/* PHONE 1: LEFT PHONE (Angled / Serong Kiri - Daftar Tugas, visible on md+) */}
+        <div className="hidden md:flex flex-col w-[250px] lg:w-[270px] h-[520px] lg:h-[550px] bg-white rounded-[38px] border-[7px] border-slate-900 shadow-xl overflow-hidden transform -rotate-6 translate-x-8 translate-y-3 hover:-rotate-3 transition-transform duration-300 z-0">
           
           {/* Top Notch Bar */}
           <div className="w-full h-8 px-4 pt-2 flex items-center justify-between text-[10px] font-semibold text-slate-800 bg-white z-20">
@@ -186,7 +185,7 @@ export const DualPhoneMockup: React.FC = () => {
         {/* ======================================================== */}
         {/* PHONE 2: RIGHT PHONE (Front Facing - Beranda & Interaktif) */}
         {/* ======================================================== */}
-        <div className="relative w-[280px] sm:w-[310px] md:w-[330px] h-[580px] md:h-[620px] bg-white rounded-[44px] border-[8px] border-slate-900 shadow-2xl overflow-hidden flex flex-col z-10 hover:scale-[1.02] transition-transform duration-300">
+        <div className="relative w-[min(280px,88vw)] sm:w-[310px] md:w-[330px] h-[550px] sm:h-[580px] md:h-[620px] bg-white rounded-[44px] border-[8px] border-slate-900 shadow-2xl overflow-hidden flex flex-col z-10 hover:scale-[1.02] transition-transform duration-300">
           
           {/* Top Notch / Dynamic Island */}
           <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-28 h-5 bg-slate-900 rounded-full z-30 flex items-center justify-end px-3">
