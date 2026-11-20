@@ -226,7 +226,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
         <div className="hidden xl:flex absolute top-1/2 -translate-y-1/2 -left-6 z-10 animate-burst-ml">
           <div className="bg-white/95 backdrop-blur-sm border border-emerald-200/80 shadow-md px-3.5 py-2 rounded-xl text-left flex items-center gap-2 text-xs font-bold text-emerald-700 animate-float-2">
             <Zap className="w-4 h-4 text-emerald-600 fill-emerald-100" />
-            <span>0 Detik Buka · 100% Offline Shell</span>
+            <span>0 Detik Buka ·  Shell</span>
           </div>
         </div>
 
@@ -249,7 +249,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
         <div className="flex sm:hidden absolute -bottom-8 left-1/2 -translate-x-1/2 z-20 animate-burst-mobile">
           <span className="px-3 py-1 rounded-full bg-slate-900 text-white font-medium text-[10px] shadow-sm flex items-center gap-1.5">
             <Zap className="w-3 h-3 text-emerald-400 fill-emerald-400" />
-            <span>0 Detik · 100% Offline</span>
+            <span>0 Detik · </span>
           </span>
         </div>
 

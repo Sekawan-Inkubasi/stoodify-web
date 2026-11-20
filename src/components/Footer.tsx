@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Heart, Sparkles, Code2 } from 'lucide-react';
+import { ExternalLink, Sparkles, Code2 } from 'lucide-react';
 import logoStoodify from '../assets/logo_stoodify.png';
 
 export const Footer: React.FC = () => {
@@ -30,7 +30,6 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-xs font-medium">
               <li><a href="#fitur" className="hover:text-[#0062FF] transition-colors">Fitur Unggulan</a></li>
               <li><a href="#cara-kerja" className="hover:text-[#0062FF] transition-colors">Alur Cara Kerja</a></li>
-              <li><a href="#demo" className="hover:text-[#0062FF] transition-colors">Simulator Smartphone</a></li>
               <li><a href="#unduh" className="hover:text-[#0062FF] transition-colors">Unduh APK Android</a></li>
             </ul>
           </div>
@@ -47,7 +46,7 @@ export const Footer: React.FC = () => {
               >
                 <div className="flex items-center gap-2">
                   <Code2 className="w-4 h-4 text-slate-700" />
-                  <span>stoodify-web (Landing Demo)</span>
+                  <span>stoodify-web (Web Resmi)</span>
                 </div>
                 <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#0062FF]" />
               </a>
@@ -60,7 +59,7 @@ export const Footer: React.FC = () => {
               >
                 <div className="flex items-center gap-2">
                   <Code2 className="w-4 h-4 text-slate-700" />
-                  <span>stoodify-apk (Native Android Shell)</span>
+                  <span>stoodify-apk (Rilis Android)</span>
                 </div>
                 <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#0062FF]" />
               </a>
@@ -70,11 +69,9 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Credits & Copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© 2026 Stoodify. Dikembangkan oleh Tim Sekawan Inkubasi untuk Pameran Inkubasi.</p>
-          <p className="flex items-center gap-1">
-            Dibangun dengan <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" /> untuk pendidikan siswa Indonesia.
-          </p>
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+          <p>© {new Date().getFullYear()} Stoodify. Dikembangkan oleh Tim Sekawan Inkubasi.</p>
+          <p>Didesain untuk Siswa SMA/SMK di Indonesia</p>
         </div>
 
       </div>

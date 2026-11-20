@@ -57,7 +57,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8FBFE] text-[#0F172A] selection:bg-[#0062FF] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#F8FBFE] text-[#171923] selection:bg-[#0062FF] selection:text-white">
       {/* Brand Intro & Loading Reveal */}
       <LoadingScreen onComplete={() => setIsLoading(false)} />
 
@@ -71,8 +71,8 @@ export function App() {
 
           <main className="flex-1">
             <Hero />
-            <ProblemSolution />
             <Features />
+            <ProblemSolution />
             <HowItWorks />
             <DownloadSection />
           </main>

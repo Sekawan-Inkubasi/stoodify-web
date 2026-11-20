@@ -29,7 +29,7 @@ Desain web promosi Stoodify wajib mengikuti standar desain yang lugas, manusiawi
 | Aspek | ❌ Praktik Slop AI yang DILARANG |  Standar Humanis Stoodify |
 | :--- | :--- | :--- |
 | **Palet & Gradien** | Gradien ungu-biru neon gelap acak di semua tempat, efek *glassmorphism* buram berlebihan. | Latar belakang kanvas biru pucat bersih (`#F8FBFE`), permukaan kartu putih solid, aksen biru terang fungsional (`#0062FF`). |
-| **Klaim & Bukti** | *"Platform AI revolusioner pengubah masa depan pendidikan dunia yang dipercaya jutaan siswa"*. | Informasi faktual konkret: *"APK Android mandiri ~9.9 MB, 100% offline-first jalan seketika tanpa kuota, sinkronisasi jadwal otomatis"*. |
+| **Klaim & Bukti** | *"Platform AI revolusioner pengubah masa depan pendidikan dunia yang dipercaya jutaan siswa"*. | Informasi faktual konkret: *"APK Android mandiri ~9.9 MB, -first jalan seketika tanpa kuota, sinkronisasi jadwal otomatis"*. |
 | **Kosakata Teks** | *Unlock, elevate, empower, delve, seamlessly, game-changer, robust, journey*. | Kalimat aktif, lugas, santun, dan langsung menjawab kebutuhan siswa sehari-hari. |
 | **Hierarki Visual** | Kartu melayang-layang dengan bayangan pekat tanpa batas tepi yang jelas. | Garis tepi samar terstruktur (`border-slate-200/80`), radius konsisten, bayangan halus bervolume rendah. |
 | **Aksesibilitas** | Teks abu-abu terang di atas latar putih (kontras rendah). | Rasio kontras teks utama minimal 12:1 (`#0F172A`), tombol aksi minimal 4.8:1 terhadap warna latar. |
@@ -137,7 +137,7 @@ flowchart TD
       1. **Tombol Primer**: `"Coba Simulator Langsung"` (Membawa layar langsung bergulir ke Bagian 5).
       2. **Tombol Sekunder**: `"Unduh APK Android (~9.9 MB)"` (Tautan ke file installer rilis resmi).
     - *Trust Signals (Micro-Highlight)*:
-      - ⚡ **100% Offline-First**: Jalan seketika tanpa kuota, 0 detik loading.
+      - ⚡ **-First**: Jalan seketika tanpa kuota, 0 detik loading.
       - 📦 **Ringan & Hemat Memori**: Ukuran berkas APK hanya ~9.9 MB.
       - 🛡️ **Bebas Iklan & Pelacak**: Fokus murni untuk kenyamanan belajar.
   - **Kolom Kanan (Visual Dual-Phone Mockup)**:
@@ -245,7 +245,7 @@ flowchart TD
 | *Revolusi cara belajarmu sekarang* | *Belajar lebih tenang tanpa panik tugas* | Menghindari hiperbola berlebihan. |
 | *Membuka potensi tanpa batas* | *Bantu atur waktu sekolah dan tugasmu* | Langsung menjelaskan kegunaan konkret. |
 | *Platform terdepan yang didukung teknologi masa depan* | *Asisten belajar pintar berbasis AI* | Spesifik, lugas, dan akurat. |
-| *Fitur canggih yang seamless dan robust* | *Ringan, hemat memori, dan jalan 100% offline* | Fakta teknis yang dicari oleh siswa. |
+| *Fitur canggih yang seamless dan robust* | *Ringan, hemat memori, dan jalan * | Fakta teknis yang dicari oleh siswa. |
 | *Tingkatkan perjalanan belajarmu* | *Mulai cicil tugas dan siapkan materi besok* | Aksi nyata yang bisa dikerjakan detik ini. |
 
 ---

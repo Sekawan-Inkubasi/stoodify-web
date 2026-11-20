@@ -4,11 +4,12 @@
   --font-sans: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --color-stoodify: #0062FF;
   --color-stoodify-hover: #0052D9;
-  --color-stoodify-light: #EBF2FA;
+  --color-stoodify-light: #EFF6FF;
   --color-stoodify-glow: rgba(0, 98, 255, 0.18);
-  --color-ink: #0F172A;
+  --color-stoodify-secondary: #00D2FF;
+  --color-ink: #171923;
   --color-body: #475569;
-  --color-muted: #64748B;
+  --color-muted: #777B8C;
   --color-canvas: #F8FBFE;
   --color-surface: #FFFFFF;
   --color-border: #E2E8F0;
@@ -45,7 +46,7 @@
 
 /* Custom elevations & shadows */
 .shadow-nav {
-  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(226, 232, 240, 0.8);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(226, 232, 240, 0.8);
 }
 
 .shadow-card {
@@ -53,11 +54,11 @@
 }
 
 .shadow-card-hover {
-  box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(0, 98, 255, 0.2);
+  box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(0, 98, 255, 0.25);
 }
 
 .shadow-phone {
-  box-shadow: 0 25px 60px -15px rgba(0, 60, 180, 0.18), 0 0 0 8px #FFFFFF, 0 0 0 9px #E2E8F0;
+  box-shadow: 0 25px 60px -15px rgba(0, 98, 255, 0.18), 0 0 0 8px #FFFFFF, 0 0 0 9px #E2E8F0;
 }
 
 .shadow-btn-primary {
@@ -81,6 +82,59 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Nicepay-style smooth floating animations */
+@keyframes float-hero-card-left {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-hero-card-right {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float-cursor-tag {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(1.5deg);
+  }
+}
+
+@keyframes float-phone-mockup {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-card-1 {
+  animation: float-hero-card-left 5s ease-in-out infinite;
+}
+
+.animate-float-card-2 {
+  animation: float-hero-card-right 5.5s ease-in-out 1s infinite;
+}
+
+.animate-float-cursor {
+  animation: float-cursor-tag 3.8s ease-in-out infinite;
+}
+
+.animate-float-phone {
+  animation: float-phone-mockup 6s ease-in-out infinite;
 }
 
 /* Gentle zero-gravity floating animations for loading study desk */
@@ -333,3 +387,33 @@
 .animate-quiz-pop {
   animation: quiz-pop 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
+
+/* Horizontal Ticker Marquee Animation */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Ticker gradient mask for smooth edges */
+.mask-fade-x {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+/* Wide / Extended Poster Font */
+.font-poster {
+  font-family: 'Unbounded', 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0.08em;
+}
+
+

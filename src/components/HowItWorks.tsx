@@ -1,5 +1,7 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Download, CheckCircle2 } from 'lucide-react';
+
+const DIRECT_APK_DOWNLOAD_URL = 'https://github.com/Sekawan-Inkubasi/stoodify-apk/releases/download/v2.1.0/stoodify-v2.1.0.apk';
 
 export const HowItWorks: React.FC = () => {
   const steps = [
@@ -69,18 +71,26 @@ export const HowItWorks: React.FC = () => {
           ))}
         </div>
 
-        {/* Banner Quick Link to Simulator */}
-        <div className="mt-14 p-6 rounded-2xl bg-slate-50 border border-slate-200/70 flex flex-col sm:flex-row items-center justify-between gap-4 reveal-init reveal-delay-200">
+        {/* Conversion Banner to Download APK */}
+        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-blue-50/80 via-white to-blue-50/80 border border-blue-100 flex flex-col sm:flex-row items-center justify-between gap-5 reveal-init reveal-delay-200 shadow-xs">
           <div className="text-center sm:text-left">
-            <h4 className="text-sm font-bold text-[#0F172A]">Ingin merasakan alur ini langsung?</h4>
-            <p className="text-xs text-[#64748B] mt-0.5">Kamu bisa mencoba mencentang tugas dan menyalakan timer fokus di simulator di atas.</p>
+            <span className="text-[10px] font-bold text-[#0062FF] uppercase tracking-wider block mb-1">
+              Mulai Langkah Nyata
+            </span>
+            <h4 className="text-base sm:text-lg font-bold text-[#0F172A]">
+              Ingin ritme belajarmu tertata dan bebas panik?
+            </h4>
+            <p className="text-xs sm:text-sm text-[#475569] mt-0.5 max-w-lg">
+              Pasang aplikasi Stoodify di smartphone kamu sekarang (~9.9 MB). Ringan, bebas iklan, dan dapat diakses offline.
+            </p>
           </div>
           <a
-            href="#demo"
-            className="px-5 py-2.5 rounded-xl bg-[#0062FF] text-white text-xs font-bold shadow-sm hover:bg-[#0052D9] transition-colors flex items-center gap-1.5 shrink-0"
+            href={DIRECT_APK_DOWNLOAD_URL}
+            download="stoodify-v2.1.0.apk"
+            className="px-6 py-3 rounded-xl bg-[#0062FF] text-white text-sm font-bold shadow-btn-primary hover:bg-[#0052D9] transition-all flex items-center gap-2 shrink-0 group cursor-pointer"
           >
-            Buka Simulator Sekarang
-            <ArrowRight className="w-3.5 h-3.5" />
+            <Download className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
+            <span>Unduh APK Sekarang</span>
           </a>
         </div>
 
