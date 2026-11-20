@@ -1,7 +1,7 @@
 import React from 'react';
 import { Download, CheckCircle2 } from 'lucide-react';
 
-const DIRECT_APK_DOWNLOAD_URL = 'https://github.com/Sekawan-Inkubasi/stoodify-apk/releases/download/v2.1.0/stoodify-v2.1.0.apk';
+const DIRECT_APK_DOWNLOAD_URL = 'https://github.com/Sekawan-Inkubasi/stoodify-apk/releases/download/latest/stoodify-latest.apk';
 
 export const HowItWorks: React.FC = () => {
   const steps = [
@@ -86,7 +86,7 @@ export const HowItWorks: React.FC = () => {
           </div>
           <a
             href={DIRECT_APK_DOWNLOAD_URL}
-            download="stoodify-v2.1.0.apk"
+            download="stoodify-latest.apk"
             className="px-6 py-3 rounded-xl bg-[#0062FF] text-white text-sm font-bold shadow-btn-primary hover:bg-[#0052D9] transition-all flex items-center gap-2 shrink-0 group cursor-pointer"
           >
             <Download className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" />

@@ -5,7 +5,7 @@ import logoStoodify from '../assets/logo_stoodify.png';
 
 export const DownloadSection: React.FC = () => {
   const [showMobileQr, setShowMobileQr] = useState(false);
-  const directApkUrl = 'https://github.com/Sekawan-Inkubasi/stoodify-apk/releases/download/v2.1.0/stoodify-v2.1.0.apk';
+  const directApkUrl = 'https://github.com/Sekawan-Inkubasi/stoodify-apk/releases/download/latest/stoodify-latest.apk';
 
   return (
     <section id="unduh" className="py-14 sm:py-20 md:py-28 bg-[#F8FBFE] scroll-mt-24 sm:scroll-mt-28">
@@ -24,7 +24,7 @@ export const DownloadSection: React.FC = () => {
             <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 text-xs font-semibold text-blue-300 tracking-wide uppercase">
                 <Smartphone className="w-3.5 h-3.5 text-blue-400" />
-                Rilis Resmi APK Android · v2.1.0
+                Rilis Resmi APK Android · Versi Terbaru
               </div>
 
               <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
@@ -40,11 +40,11 @@ export const DownloadSection: React.FC = () => {
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-1 sm:pt-2">
                 <a
                   href={directApkUrl}
-                  download="stoodify-v2.1.0.apk"
+                  download="stoodify-latest.apk"
                   className="w-full sm:w-auto px-7 py-3.5 text-sm sm:text-base font-bold text-white bg-[#0062FF] hover:bg-[#0052D9] rounded-2xl sm:rounded-xl shadow-[0_6px_20px_rgba(0,98,255,0.35)] hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2.5 group cursor-pointer"
                 >
                   <Download className="w-5 h-5 transition-transform group-hover:-translate-y-0.5" />
-                  <span>Unduh APK Langsung (v2.1.0)</span>
+                  <span>Unduh APK Langsung</span>
                 </a>
 
                 <a
@@ -56,17 +56,17 @@ export const DownloadSection: React.FC = () => {
                 </a>
               </div>
 
-              {/* Technical Badges (Responsive Horizontal Chips di Mobile) */}
-              <div className="pt-4 sm:pt-6 border-t border-slate-700/60 flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-4 text-slate-300 text-xs">
-                <div className="flex items-center gap-1.5 bg-white/5 sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-full sm:rounded-none border sm:border-0 border-white/10">
+              {/* Technical Specifications (Clean Horizontal Items) */}
+              <div className="pt-4 sm:pt-6 border-t border-slate-700/60 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-slate-300 text-xs">
+                <div className="flex items-center gap-1.5">
                   <HardDrive className="w-3.5 h-3.5 text-[#00D2FF] shrink-0" />
                   <span className="text-[11px] sm:text-xs">Hanya ~9.9 MB</span>
                 </div>
-                <div className="flex items-center gap-1.5 bg-white/5 sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-full sm:rounded-none border sm:border-0 border-white/10">
+                <div className="flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                   <span className="text-[11px] sm:text-xs">Bebas Iklan & Pelacak</span>
                 </div>
-                <div className="flex items-center gap-1.5 bg-white/5 sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-full sm:rounded-none border sm:border-0 border-white/10">
+                <div className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-blue-400 shrink-0" />
                   <span className="text-[11px] sm:text-xs">Android 8.0+</span>
                 </div>
@@ -96,7 +96,7 @@ export const DownloadSection: React.FC = () => {
                       />
                     </div>
                     <span className="text-[10px] font-mono text-slate-500 mt-2">
-                      stoodify-v2.1.0.apk (~9.9 MB)
+                      stoodify-latest.apk (~9.9 MB)
                     </span>
                   </div>
                 )}
@@ -138,7 +138,7 @@ export const DownloadSection: React.FC = () => {
 
                 <div className="mt-4 text-center">
                   <span className="text-[11px] font-mono text-slate-500 font-semibold">
-                    stoodify-v2.1.0.apk (~9.9 MB)
+                    stoodify-latest.apk (~9.9 MB)
                   </span>
                 </div>
               </div>

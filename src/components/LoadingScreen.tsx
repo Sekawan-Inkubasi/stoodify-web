@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Sparkles, 
+  Award, 
   Timer, 
   Flame, 
   Calendar, 
@@ -187,7 +187,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           <div className="bg-white/95 backdrop-blur-md border border-indigo-100 shadow-xl rounded-2xl p-4 text-left w-68 lg:w-76 animate-float-3 transition-transform hover:scale-105">
             <div className="flex items-center justify-between mb-1.5 text-indigo-600">
               <div className="flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5" />
+                <Award className="w-3.5 h-3.5" />
                 <span className="text-[11px] font-bold uppercase tracking-wider">AI Prediktif Materi</span>
               </div>
               <span className="text-[10px] font-bold bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-md">
@@ -226,7 +226,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
         <div className="hidden xl:flex absolute top-1/2 -translate-y-1/2 -left-6 z-10 animate-burst-ml">
           <div className="bg-white/95 backdrop-blur-sm border border-emerald-200/80 shadow-md px-3.5 py-2 rounded-xl text-left flex items-center gap-2 text-xs font-bold text-emerald-700 animate-float-2">
             <Zap className="w-4 h-4 text-emerald-600 fill-emerald-100" />
-            <span>0 Detik Buka ·  Shell</span>
+            <span>0 Detik Buka · Akses Mandiri</span>
           </div>
         </div>
 
@@ -241,7 +241,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
         {/* Mobile Burst Pills: Clean, non-colliding */}
         <div className="flex sm:hidden absolute -top-8 left-1/2 -translate-x-1/2 z-20 animate-burst-mobile">
           <span className="px-3 py-1 rounded-full bg-white/95 border border-slate-200 text-[#0062FF] font-bold text-[10px] shadow-sm flex items-center gap-1.5">
-            <Sparkles className="w-3 h-3 text-[#0062FF]" />
+            <Award className="w-3 h-3 text-[#0062FF]" />
             <span>SMK Telkom Sidoarjo</span>
           </span>
         </div>
@@ -249,7 +249,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
         <div className="flex sm:hidden absolute -bottom-8 left-1/2 -translate-x-1/2 z-20 animate-burst-mobile">
           <span className="px-3 py-1 rounded-full bg-slate-900 text-white font-medium text-[10px] shadow-sm flex items-center gap-1.5">
             <Zap className="w-3 h-3 text-emerald-400 fill-emerald-400" />
-            <span>0 Detik · </span>
+            <span>0 Detik · Akses Cepat</span>
           </span>
         </div>
 

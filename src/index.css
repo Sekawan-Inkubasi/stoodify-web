@@ -84,57 +84,33 @@
   scrollbar-width: none;
 }
 
-/* Nicepay-style smooth floating animations */
-@keyframes float-hero-card-left {
-  0%, 100% {
-    transform: translateY(0px);
+/* Mobile top drawer animations */
+@keyframes slide-down-menu {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
   }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-@keyframes float-hero-card-right {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-@keyframes float-cursor-tag {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-4px) rotate(1.5deg);
-  }
+.animate-slide-down {
+  animation: slide-down-menu 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes float-phone-mockup {
-  0%, 100% {
-    transform: translateY(0px);
+@keyframes fade-in-backdrop {
+  from {
+    opacity: 0;
   }
-  50% {
-    transform: translateY(-6px);
+  to {
+    opacity: 1;
   }
 }
 
-.animate-float-card-1 {
-  animation: float-hero-card-left 5s ease-in-out infinite;
-}
-
-.animate-float-card-2 {
-  animation: float-hero-card-right 5.5s ease-in-out 1s infinite;
-}
-
-.animate-float-cursor {
-  animation: float-cursor-tag 3.8s ease-in-out infinite;
-}
-
-.animate-float-phone {
-  animation: float-phone-mockup 6s ease-in-out infinite;
+.animate-fade-in {
+  animation: fade-in-backdrop 0.2s ease-out forwards;
 }
 
 /* Gentle zero-gravity floating animations for loading study desk */
