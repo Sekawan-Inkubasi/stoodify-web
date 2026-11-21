@@ -10,16 +10,16 @@ export const DownloadSection: React.FC = () => {
   return (
     <section id="unduh" className="py-14 sm:py-20 md:py-28 bg-[#F8FBFE] scroll-mt-24 sm:scroll-mt-28">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        
+
         {/* Big Download & QR Card Container */}
         <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-3xl sm:rounded-[36px] p-6 sm:p-10 md:p-16 text-white shadow-2xl relative overflow-hidden">
-          
+
           {/* Subtle Background Glows */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#0062FF]/20 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/10 rounded-full blur-2xl pointer-events-none" />
 
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
+
             {/* Left Column: Download Info */}
             <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 text-xs font-semibold text-blue-300 tracking-wide uppercase">
@@ -33,7 +33,7 @@ export const DownloadSection: React.FC = () => {
               </h2>
 
               <p className="text-xs sm:text-base text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                Stoodify tersedia dalam format APK mandiri berukuran sangat ringan (~9.9 MB). Berjalan mandiri tanpa kuota internet setelah terpasang di HP kamu.
+                Stoodify tersedia dalam format APK mandiri berukuran sangat ringan (~19 MB). Berjalan mandiri tanpa kuota internet setelah terpasang di HP kamu.
               </p>
 
               {/* Action Button (Fokus & Nyaman Ditekan) */}
@@ -60,7 +60,7 @@ export const DownloadSection: React.FC = () => {
               <div className="pt-4 sm:pt-6 border-t border-slate-700/60 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-slate-300 text-xs">
                 <div className="flex items-center gap-1.5">
                   <HardDrive className="w-3.5 h-3.5 text-[#00D2FF] shrink-0" />
-                  <span className="text-[11px] sm:text-xs">Hanya ~9.9 MB</span>
+                  <span className="text-[11px] sm:text-xs">Hanya ~19 MB</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
@@ -96,7 +96,7 @@ export const DownloadSection: React.FC = () => {
                       />
                     </div>
                     <span className="text-[10px] font-mono text-slate-500 mt-2">
-                      stoodify-latest.apk (~9.9 MB)
+                      stoodify-latest.apk (~19 MB)
                     </span>
                   </div>
                 )}
@@ -107,7 +107,7 @@ export const DownloadSection: React.FC = () => {
             {/* Right Column: Booth Standee QR Code Card (Hanya Tampil di Layar PC/Laptop) */}
             <div className="hidden lg:flex lg:col-span-5 justify-center">
               <div className="bg-white rounded-3xl p-6 sm:p-8 text-slate-900 shadow-2xl border border-slate-100 flex flex-col items-center text-center max-w-xs w-full relative">
-                
+
                 {/* Floating Stoodify Logo Pin */}
                 <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 shadow-md p-1.5 flex items-center justify-center -mt-12 mb-3">
                   <img src={logoStoodify} alt="Stoodify" className="w-full h-full object-contain" />
@@ -138,7 +138,7 @@ export const DownloadSection: React.FC = () => {
 
                 <div className="mt-4 text-center">
                   <span className="text-[11px] font-mono text-slate-500 font-semibold">
-                    stoodify-latest.apk (~9.9 MB)
+                    stoodify-latest.apk (~19 MB)
                   </span>
                 </div>
               </div>

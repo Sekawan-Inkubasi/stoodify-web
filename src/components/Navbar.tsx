@@ -58,18 +58,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGame, isAppLoading = false
       {/* ======================================================== */}
       <header className="fixed top-0 left-0 right-0 z-50 pt-3 sm:pt-4 px-3 sm:px-4 pointer-events-none">
         <div
-          className={`pointer-events-auto max-w-4xl mx-auto rounded-full px-3.5 sm:px-6 py-2 sm:py-3 flex items-center justify-between gap-3 sm:gap-4 transition-all duration-300 ${
-            scrolled
+          className={`pointer-events-auto max-w-4xl mx-auto rounded-full px-3.5 sm:px-6 py-2 sm:py-3 flex items-center justify-between gap-3 sm:gap-4 transition-all duration-300 ${scrolled
               ? 'bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-[0_12px_36px_rgba(15,23,42,0.08)]'
               : 'bg-white/85 backdrop-blur-md border border-slate-200/70 shadow-[0_8px_30px_rgba(0,0,0,0.04)]'
-          }`}
+            }`}
         >
           {/* Brand Logo - Left */}
           <a href="#" className="flex items-center gap-2 sm:gap-2.5 group shrink-0">
-            <img 
-              src={logoStoodify} 
-              alt="Stoodify Logo" 
-              className="w-7 h-7 sm:w-8 sm:h-8 object-contain transition-transform group-hover:scale-105" 
+            <img
+              src={logoStoodify}
+              alt="Stoodify Logo"
+              className="w-7 h-7 sm:w-8 sm:h-8 object-contain transition-transform group-hover:scale-105"
             />
             <span className="text-xs sm:text-base font-extrabold tracking-wider text-[#171923] uppercase">
               STOODIFY
@@ -135,7 +134,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGame, isAppLoading = false
       {/* ======================================================== */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-xs flex flex-col justify-start animate-fade-in">
-          
+
           {/* Top-down Drawer Panel */}
           <div className="bg-white rounded-b-3xl p-5 pt-4 pb-6 shadow-2xl space-y-4 animate-slide-down border-b border-slate-200/90">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
@@ -178,7 +177,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGame, isAppLoading = false
                 className="w-full py-3.5 rounded-full bg-[#0062FF] hover:bg-[#0052D9] text-white text-sm font-bold flex items-center justify-center gap-2 shadow-btn-primary transition-all"
               >
                 <Download className="w-4 h-4" />
-                <span>Unduh APK Android (~9.9 MB)</span>
+                <span>Unduh APK Android (~19 MB)</span>
               </a>
             </div>
           </div>

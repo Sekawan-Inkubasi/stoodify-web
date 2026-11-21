@@ -28,7 +28,7 @@ export const HowItWorks: React.FC = () => {
   return (
     <section id="cara-kerja" className="py-20 md:py-28 bg-white border-b border-slate-200/80 scroll-mt-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        
+
         {/* Section Header */}
         <div className="mb-8 sm:mb-14 reveal-init">
           <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.14em] text-[#64748B] block mb-2">
@@ -47,9 +47,8 @@ export const HowItWorks: React.FC = () => {
           {steps.map((step, idx) => (
             <div
               key={step.number}
-              className={`border-t border-[#CBD5E1] pt-4 sm:pt-6 flex flex-col justify-between group reveal-init ${
-                idx === 0 ? 'reveal-delay-100' : idx === 1 ? 'reveal-delay-200' : 'reveal-delay-300'
-              }`}
+              className={`border-t border-[#CBD5E1] pt-4 sm:pt-6 flex flex-col justify-between group reveal-init ${idx === 0 ? 'reveal-delay-100' : idx === 1 ? 'reveal-delay-200' : 'reveal-delay-300'
+                }`}
             >
               <div>
                 <span className="text-xs font-bold text-[#0062FF] font-mono tracking-wider block mb-2">
@@ -81,7 +80,7 @@ export const HowItWorks: React.FC = () => {
               Ingin ritme belajarmu tertata dan bebas panik?
             </h4>
             <p className="text-xs sm:text-sm text-[#475569] mt-0.5 max-w-lg">
-              Pasang aplikasi Stoodify di smartphone kamu sekarang (~9.9 MB). Ringan, bebas iklan, dan dapat diakses offline.
+              Pasang aplikasi Stoodify di smartphone kamu sekarang (~19 MB). Ringan, bebas iklan, dan dapat diakses offline.
             </p>
           </div>
           <a

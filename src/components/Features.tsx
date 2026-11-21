@@ -30,71 +30,71 @@ export const Features: React.FC = () => {
 
   return (
     <section id="fitur" className="pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-20 bg-white scroll-mt-24 sm:scroll-mt-28 relative overflow-hidden">
-      
+
       {/* Subtle Ambient Background Accents */}
-      <div 
-        aria-hidden="true" 
+      <div
+        aria-hidden="true"
         className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-blue-50/60 rounded-full blur-3xl pointer-events-none -z-0"
       />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-        
+
         {/* ======================================================== */}
         {/* EDITORIAL SPLIT SHOWCASE (SMK Telkom Sidoarjo Style)     */}
         {/* Skala proporsional & Oval Capsule diselaraskan laptop    */}
         {/* ======================================================== */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
-          
+
           {/* ------------------------------------------------------ */}
           {/* KOLOM KIRI: Oval Capsule Visual (Desktop & Laptop)     */}
           {/* ------------------------------------------------------ */}
           <div className="hidden lg:flex lg:col-span-5 justify-center items-center">
             <div className="relative flex items-center justify-center py-3">
-              
+
               {/* Geometric Pill Bar - Far Left */}
-              <div 
-                aria-hidden="true" 
+              <div
+                aria-hidden="true"
                 className="absolute -left-8 sm:-left-10 top-6 w-2.5 sm:w-3 h-28 sm:h-36 bg-[#0062FF] rounded-full shadow-xs"
               />
-              
+
               {/* Geometric Pill Bar - Lower Left */}
-              <div 
-                aria-hidden="true" 
+              <div
+                aria-hidden="true"
                 className="absolute -left-5 sm:-left-6 bottom-8 w-2 sm:w-2.5 h-14 sm:h-20 bg-[#0062FF] rounded-full"
               />
 
               {/* Geometric Accent Circle Dots */}
-              <div 
-                aria-hidden="true" 
+              <div
+                aria-hidden="true"
                 className="absolute -left-2.5 sm:-left-3 top-2 w-3 sm:w-3.5 h-3 sm:h-3.5 bg-[#0062FF] rounded-full"
               />
-              <div 
-                aria-hidden="true" 
+              <div
+                aria-hidden="true"
                 className="absolute -right-2.5 sm:-right-3 top-10 w-3 sm:w-3.5 h-3 sm:h-3.5 bg-[#0062FF] rounded-full"
               />
-              <div 
-                aria-hidden="true" 
+              <div
+                aria-hidden="true"
                 className="absolute -right-4 sm:-right-5 bottom-12 w-2.5 sm:w-3 h-2.5 sm:h-3 bg-[#0062FF] rounded-full"
               />
 
               {/* The Iconic Oval Capsule Frame (Kembali Oval 'rounded-full' & Skala Proporsional) */}
               <div className="relative w-[210px] sm:w-[230px] md:w-[245px] lg:w-[255px] aspect-[1/1.45] rounded-full overflow-hidden bg-gradient-to-b from-[#0062FF] via-[#0055F6] to-[#003EA8] shadow-[0_16px_40px_rgba(0,98,255,0.18)] ring-6 sm:ring-8 ring-white flex flex-col items-center justify-center p-5 select-none">
-                
+
                 {/* Background Subtle Gradient Wave */}
-                <div 
-                  aria-hidden="true" 
+                <div
+                  aria-hidden="true"
                   className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-white/20 pointer-events-none"
                 />
 
                 {/* Ambient Soft Radial Glow behind Logo */}
-                <div 
-                  aria-hidden="true" 
+                <div
+                  aria-hidden="true"
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white/20 rounded-full blur-xl pointer-events-none"
                 />
 
                 {/* Stoodify Brand Logo Card & Brand Typography */}
                 <div className="relative z-10 flex flex-col items-center text-center space-y-2.5 sm:space-y-3">
-                  
+
                   {/* Elevated App Icon Tile (Skala Kompak & Elegan) */}
                   <div className="w-20 h-20 sm:w-22 sm:h-22 rounded-2xl bg-white shadow-xl p-3.5 sm:p-4 flex items-center justify-center transform hover:scale-105 transition-transform duration-300 ring-3 ring-white/30">
                     <img
@@ -136,12 +136,12 @@ export const Features: React.FC = () => {
           {/* KOLOM KANAN: Daftar Fitur Editorial Terstruktur         */}
           {/* ------------------------------------------------------ */}
           <div className="lg:col-span-7">
-            
+
             {/* Guide line with indicator dots (Telkom Sidoarjo Reference) */}
             <div className="relative pl-4 sm:pl-6 border-l-2 border-[#0062FF]/85 space-y-4 sm:space-y-5">
-              
+
               {/* Top Accent Dot on line */}
-              <div 
+              <div
                 aria-hidden="true"
                 className="absolute -top-1.5 -left-[6px] w-2.5 h-2.5 rounded-full bg-[#0062FF] ring-3 ring-white"
               />
@@ -210,7 +210,7 @@ export const Features: React.FC = () => {
                     className="px-5 py-2.5 rounded-full bg-[#0062FF] hover:bg-[#0052D9] text-white text-xs sm:text-sm font-bold shadow-[0_6px_20px_rgba(0,98,255,0.22)] hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 group cursor-pointer"
                   >
                     <Download className="w-3.5 h-3.5 transition-transform group-hover:-translate-y-0.5" />
-                    <span>Unduh APK Android (~9.9 MB)</span>
+                    <span>Unduh APK Android (~19 MB)</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </a>
 
@@ -224,7 +224,7 @@ export const Features: React.FC = () => {
               </div>
 
               {/* Bottom Accent Dot on line */}
-              <div 
+              <div
                 aria-hidden="true"
                 className="absolute -bottom-1.5 -left-[6px] w-2.5 h-2.5 rounded-full bg-[#0062FF] ring-3 ring-white"
               />

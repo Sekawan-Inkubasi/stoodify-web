@@ -2,7 +2,7 @@
 > **Dokumen Resmi Arsitektur Visual, UI/UX, Copywriting, dan Alur Halaman Promosi**  
 > **Proyek**: Stoodify Mobile Application (`https://github.com/Sekawan-Inkubasi/stoodify-apk.git`)  
 > **Target Audiens Web**: Siswa SMA/SMK sederajat, Pengajar/Mentor, dan Pengunjung Stan Pameran Edukasi  
-> **Tujuan**: Mendorong adopsi aplikasi, mengonversi pengunjung menjadi pengguna aktif (unduh APK ~9.9 MB), serta menyediakan demo interaktif yang dapat dicoba seketika di peramban.
+> **Tujuan**: Mendorong adopsi aplikasi, mengonversi pengunjung menjadi pengguna aktif (unduh APK ~19 MB), serta menyediakan demo interaktif yang dapat dicoba seketika di peramban.
 
 ---
 
@@ -29,7 +29,7 @@ Desain web promosi Stoodify wajib mengikuti standar desain yang lugas, manusiawi
 | Aspek | ❌ Praktik Slop AI yang DILARANG |  Standar Humanis Stoodify |
 | :--- | :--- | :--- |
 | **Palet & Gradien** | Gradien ungu-biru neon gelap acak di semua tempat, efek *glassmorphism* buram berlebihan. | Latar belakang kanvas biru pucat bersih (`#F8FBFE`), permukaan kartu putih solid, aksen biru terang fungsional (`#0062FF`). |
-| **Klaim & Bukti** | *"Platform AI revolusioner pengubah masa depan pendidikan dunia yang dipercaya jutaan siswa"*. | Informasi faktual konkret: *"APK Android mandiri ~9.9 MB, -first jalan seketika tanpa kuota, sinkronisasi jadwal otomatis"*. |
+| **Klaim & Bukti** | *"Platform AI revolusioner pengubah masa depan pendidikan dunia yang dipercaya jutaan siswa"*. | Informasi faktual konkret: *"APK Android mandiri ~19 MB, -first jalan seketika tanpa kuota, sinkronisasi jadwal otomatis"*. |
 | **Kosakata Teks** | *Unlock, elevate, empower, delve, seamlessly, game-changer, robust, journey*. | Kalimat aktif, lugas, santun, dan langsung menjawab kebutuhan siswa sehari-hari. |
 | **Hierarki Visual** | Kartu melayang-layang dengan bayangan pekat tanpa batas tepi yang jelas. | Garis tepi samar terstruktur (`border-slate-200/80`), radius konsisten, bayangan halus bervolume rendah. |
 | **Aksesibilitas** | Teks abu-abu terang di atas latar putih (kontras rendah). | Rasio kontras teks utama minimal 12:1 (`#0F172A`), tombol aksi minimal 4.8:1 terhadap warna latar. |
@@ -135,10 +135,10 @@ flowchart TD
       > Asisten belajar pintar berbasis AI yang menyusun jadwal sekolah terintegrasi, memprioritaskan tugas mendesak, dan memprediksi materi yang akan datang: semuanya dalam satu genggaman.
     - *Grup Tombol CTA*:
       1. **Tombol Primer**: `"Coba Simulator Langsung"` (Membawa layar langsung bergulir ke Bagian 5).
-      2. **Tombol Sekunder**: `"Unduh APK Android (~9.9 MB)"` (Tautan ke file installer rilis resmi).
+      2. **Tombol Sekunder**: `"Unduh APK Android (~19 MB)"` (Tautan ke file installer rilis resmi).
     - *Trust Signals (Micro-Highlight)*:
       - ⚡ **-First**: Jalan seketika tanpa kuota, 0 detik loading.
-      - 📦 **Ringan & Hemat Memori**: Ukuran berkas APK hanya ~9.9 MB.
+      - 📦 **Ringan & Hemat Memori**: Ukuran berkas APK hanya ~19 MB.
       - 🛡️ **Bebas Iklan & Pelacak**: Fokus murni untuk kenyamanan belajar.
   - **Kolom Kanan (Visual Dual-Phone Mockup)**:
     - Menampilkan dua ponsel Android bersisian dalam sudut pandang prespektif yang rapi.
@@ -200,7 +200,7 @@ flowchart TD
 
 ### Bagian 6: Alur Penggunaan (How It Works)
 - **Tujuan**: Menghilangkan hambatan psikologis teknis dengan membuktikan bahwa memulai dengan Stoodify sangat mudah dalam 3 langkah singkat:
-  1. **Langkah 1 — Unduh & Pasang Ringkas (1 Menit)**: Unduh installer APK resmi (~9.9 MB), pasang di HP Android tanpa perlu registrasi rumit yang menyita waktu.
+  1. **Langkah 1 — Unduh & Pasang Ringkas (1 Menit)**: Unduh installer APK resmi (~19 MB), pasang di HP Android tanpa perlu registrasi rumit yang menyita waktu.
   2. **Langkah 2 — Masukkan Jadwal & Tugas Sekolah (2 Menit)**: Input mata pelajaran dan deadline tugas yang sedang dihadapi minggu ini.
   3. **Langkah 3 — Dapatkan Arahan Belajar Otomatis**: AI Stoodify langsung memetakan kapan kamu harus belajar, tugas mana yang harus diselesaikan sekarang, dan apa yang harus dipelajari untuk besok.
 
@@ -211,7 +211,7 @@ flowchart TD
 - **Komponen**:
   - **Sisi Kiri: Kartu Unduh Digital**:
     - Tombol unduh berukuran besar: `"Unduh Stoodify APK v1.0.0 (Release)"`.
-    - Informasi berkas: Ukuran `~9.9 MB`, Target Arsitektur `arm64-v8a / universal`, Versi Android minimum `Android 8.0 (Oreo) ke atas`.
+    - Informasi berkas: Ukuran `~19 MB`, Target Arsitektur `arm64-v8a / universal`, Versi Android minimum `Android 8.0 (Oreo) ke atas`.
     - Tautan ke riwayat rilis GitHub: `https://github.com/Sekawan-Inkubasi/stoodify-apk/releases`.
   - **Sisi Kanan: Kartu QR Code Pemindaian Cepat**:
     - Komponen QR Code interaktif beresolusi tajam menggunakan `qrcode.react`.

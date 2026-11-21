@@ -1147,7 +1147,7 @@ export const QUESTION_BANK: Question[] = [
   },
   {
     "id": 89,
-    "question": "Apa keuntungan utama aplikasi Stoodify yang berukuran ringan hanya ~9.9 MB?",
+    "question": "Apa keuntungan utama aplikasi Stoodify yang berukuran ringan hanya ~19 MB?",
     "options": [
       "Membuat HP bisa terbang",
       "Cepat diunduh, tidak membebani memori HP, dan bisa dibuka offline",
@@ -1155,7 +1155,7 @@ export const QUESTION_BANK: Question[] = [
       "Mengisi baterai tanpa kabel"
     ],
     "correctIndex": 1,
-    "explanation": "Dengan ukuran ~9.9 MB, Stoodify ramah untuk semua jenis HP Android siswa dan dapat beroperasi 100% tanpa internet.",
+    "explanation": "Dengan ukuran ~19 MB, Stoodify ramah untuk semua jenis HP Android siswa dan dapat beroperasi 100% tanpa internet.",
     "category": "Manajemen Belajar"
   },
   {
