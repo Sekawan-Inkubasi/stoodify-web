@@ -30,6 +30,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-xs font-medium">
               <li><a href="#fitur" className="hover:text-[#0062FF] transition-colors">Fitur Unggulan</a></li>
               <li><a href="#cara-kerja" className="hover:text-[#0062FF] transition-colors">Alur Cara Kerja</a></li>
+              <li><a href="#faq" className="hover:text-[#0062FF] transition-colors">Tanya Jawab (FAQ)</a></li>
               <li><a href="#unduh" className="hover:text-[#0062FF] transition-colors">Unduh APK Android</a></li>
             </ul>
           </div>

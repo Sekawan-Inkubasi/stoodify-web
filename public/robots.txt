@@ -1,0 +1,6 @@
+# Robots.txt for Stoodify (https://stoodify.vercel.app)
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://stoodify.vercel.app/sitemap.xml

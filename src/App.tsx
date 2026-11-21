@@ -5,6 +5,7 @@ import { ProblemSolution } from './components/ProblemSolution';
 import { Features } from './components/Features';
 import { HowItWorks } from './components/HowItWorks';
 import { DownloadSection } from './components/DownloadSection';
+import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 import { LoadingScreen } from './components/LoadingScreen';
 import { SpinTheWheelQuiz } from './components/games/SpinTheWheelQuiz';
@@ -74,6 +75,7 @@ export function App() {
             <Features />
             <ProblemSolution />
             <HowItWorks />
+            <FAQ />
             <DownloadSection />
           </main>
 

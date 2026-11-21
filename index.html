@@ -2,14 +2,142 @@
 <html lang="id" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stoodify — Belajar Efektif Tanpa Panik | Asisten Belajar AI & Jadwal Sekolah</title>
-    <meta name="description" content="Stoodify adalah asisten belajar pintar berbasis AI untuk siswa SMA/SMK. Atur jadwal sekolah terintegrasi, prediksi materi mata pelajaran, dan fokus belajar dengan Pomodoro." />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Stoodify — Belajar Efektif Bareng AI | Asisten Jadwal &amp; Tugas Sekolah</title>
+    <meta name="title" content="Stoodify — Belajar Efektif Bareng AI | Asisten Jadwal &amp; Tugas Sekolah" />
+    <meta name="description" content="Stoodify adalah asisten belajar cerdas berbasis AI untuk siswa SMA/SMK. Atur jadwal sekolah terintegrasi, prediksi materi mata pelajaran, hindari SKS, dan raih prestasi maksimal." />
+    <meta name="keywords" content="Stoodify, aplikasi Stoodify, AI study planner, jadwal sekolah SMA SMK, asisten belajar pintar, kurikulum merdeka, manajemen tugas siswa, download APK Stoodify" />
+    <meta name="author" content="Stoodify — Tim Sekawan Inkubasi" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://stoodify.vercel.app/" />
+
+    <!-- Favicon & PWA Icons -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#0062FF" />
+
+    <!-- Open Graph / Facebook / WhatsApp / Telegram -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://stoodify.vercel.app/" />
+    <meta property="og:title" content="Stoodify — Belajar Efektif Bareng AI | Asisten Jadwal &amp; Tugas Sekolah" />
+    <meta property="og:description" content="Aplikasi asisten belajar cerdas berbasis AI untuk siswa SMA/SMK. Jadwal sekolah terintegrasi, manajemen tugas pintar, dan fokus belajar tanpa panik." />
+    <meta property="og:image" content="https://stoodify.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Stoodify — Belajar Efektif Bareng AI untuk Pelajar Indonesia" />
+    <meta property="og:site_name" content="Stoodify" />
+    <meta property="og:locale" content="id_ID" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://stoodify.vercel.app/" />
+    <meta name="twitter:title" content="Stoodify — Belajar Efektif Bareng AI | Asisten Jadwal Siswa" />
+    <meta name="twitter:description" content="Atur jadwal sekolah, prediksi materi, dan selesaikan tugas tepat waktu dengan AI Stoodify." />
+    <meta name="twitter:image" content="https://stoodify.vercel.app/og-image.png" />
+
+    <!-- Google Search Console Verification Placeholder -->
+    <meta name="google-site-verification" content="GOOGLE_SEARCH_CONSOLE_VERIFICATION_TOKEN" />
+
+    <!-- Typography Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Syne:wght@700;800&family=Unbounded:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Schema.org Structured Data (Rich Snippets & Knowledge Graph) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://stoodify.vercel.app/#webapp",
+          "name": "Stoodify",
+          "alternateName": ["Stoodify AI", "Stoodify App", "Aplikasi Stoodify"],
+          "url": "https://stoodify.vercel.app/",
+          "description": "Asisten belajar pintar dan manajemen jadwal sekolah berbasis AI untuk siswa SMA/SMK di Indonesia.",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Android, Web",
+          "inLanguage": "id-ID",
+          "downloadUrl": "https://github.com/Sekawan-Inkubasi/stoodify-apk/releases/download/latest/stoodify-latest.apk",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "IDR",
+            "availability": "https://schema.org/InStock"
+          },
+          "featureList": [
+            "Manajemen jadwal pelajaran sekolah terintegrasi",
+            "Prioritas tugas dan pengingat deadline pintar",
+            "Prediksi materi pelajaran esok hari Kurikulum Merdeka",
+            "Zen Pomodoro focus timer",
+            "Simulasi kuis edukatif interaktif"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://stoodify.vercel.app/#organization",
+          "name": "Stoodify",
+          "url": "https://stoodify.vercel.app/",
+          "logo": "https://stoodify.vercel.app/logo_stoodify.png",
+          "sameAs": [
+            "https://github.com/Sekawan-Inkubasi/stoodify-web",
+            "https://github.com/Sekawan-Inkubasi/stoodify-apk"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://stoodify.vercel.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Apa itu Stoodify?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Stoodify adalah aplikasi asisten belajar pintar berbasis kecerdasan buatan (AI) yang dirancang khusus untuk siswa SMA/SMK sederajat di Indonesia. Aplikasi ini membantu mengintegrasikan jadwal sekolah, memprioritaskan deadline tugas, memberikan rekomendasi materi esok hari, serta menjaga fokus belajar lewat metode Zen Pomodoro."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah aplikasi Stoodify gratis digunakan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, Stoodify dapat digunakan secara gratis untuk fitur-fitur utama manajemen akademik siswa, termasuk pencatatan jadwal pelajaran sekolah tanpa batas, pelacakan tenggat tugas harian, dan timer fokus belajar mandiri tanpa gangguan iklan yang mengganggu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Bagaimana cara Stoodify membantu menghindari SKS (Sistem Kebut Semalam)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Stoodify secara otomatis memecah persiapan ujian dan tugas besar menjadi sesi belajar kecil harian yang disesuaikan dengan kalender sekolah. Siswa mendapatkan pengingat cerdas dan slot belajar optimal sehingga materi dapat dikuasai bertahap tanpa rasa panik."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Di mana saya bisa mengunduh aplikasi Stoodify?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Aplikasi Android Stoodify dapat diunduh langsung melalui tombol unduh di situs web ini (stoodify.vercel.app) atau melalui rilis resmi GitHub Tim Sekawan Inkubasi. File instalasi APK mandiri berukuran sangat ringkas (~19 MB) dan kompatibel dengan smartphone Android."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah Stoodify mendukung Kurikulum Merdeka?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tentu saja. Stoodify dirancang selaras dengan capaian pembelajaran Kurikulum Merdeka Fase E (Kelas 10) dan Fase F (Kelas 11 & 12 SMA/SMK), membantu siswa memahami topik materi esensial sebelum diajarkan di ruang kelas."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-[#F8FBFE] text-[#0F172A] font-sans antialiased selection:bg-[#0062FF] selection:text-white">
     <div id="root"></div>

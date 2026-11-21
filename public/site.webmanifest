@@ -1,0 +1,21 @@
+{
+  "name": "Stoodify — Belajar Efektif Bareng AI",
+  "short_name": "Stoodify",
+  "description": "Asisten belajar pintar dan manajemen jadwal sekolah berbasis AI untuk siswa SMA/SMK di Indonesia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8FBFE",
+  "theme_color": "#0062FF",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo_stoodify.png",
+      "sizes": "1512x1479",
+      "type": "image/png"
+    }
+  ]
+}

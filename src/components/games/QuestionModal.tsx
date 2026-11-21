@@ -14,6 +14,69 @@ interface QuestionModalProps {
   onFinish: () => void;
 }
 
+function launchCanvasConfetti(canvas: HTMLCanvasElement) {
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+
+  const particles: Array<{
+    x: number;
+    y: number;
+    vx: number;
+    vy: number;
+    color: string;
+    size: number;
+    rot: number;
+    vRot: number;
+  }> = [];
+
+  const colors = ['#0062FF', '#00D2FF', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
+
+  for (let i = 0; i < 65; i++) {
+    particles.push({
+      x: canvas.width / 2,
+      y: canvas.height / 2,
+      vx: (Math.random() - 0.5) * 12,
+      vy: (Math.random() - 0.7) * 12,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      size: Math.random() * 8 + 4,
+      rot: Math.random() * 360,
+      vRot: (Math.random() - 0.5) * 10,
+    });
+  }
+
+  const startTime = performance.now();
+
+  const render = (time: number) => {
+    const elapsed = time - startTime;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach((p) => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.25;
+      p.rot += p.vRot;
+
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate((p.rot * Math.PI) / 180);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+      ctx.restore();
+    });
+
+    if (elapsed < 1600) {
+      requestAnimationFrame(render);
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+  };
+
+  requestAnimationFrame(render);
+}
+
 export const QuestionModal: React.FC<QuestionModalProps> = ({
   question,
   questionNumber,
@@ -34,75 +97,12 @@ export const QuestionModal: React.FC<QuestionModalProps> = ({
     const correct = idx === question.correctIndex;
     if (correct) {
       sounds.playSuccess();
-      launchConfetti();
+      if (confettiCanvasRef.current) {
+        launchCanvasConfetti(confettiCanvasRef.current);
+      }
     } else {
       sounds.playWrong();
     }
-  };
-
-  const launchConfetti = () => {
-    const canvas = confettiCanvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-
-    const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      color: string;
-      size: number;
-      rot: number;
-      vRot: number;
-    }> = [];
-
-    const colors = ['#0062FF', '#00D2FF', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
-
-    for (let i = 0; i < 65; i++) {
-      particles.push({
-        x: canvas.width / 2,
-        y: canvas.height / 2,
-        vx: (Math.random() - 0.5) * 12,
-        vy: (Math.random() - 0.7) * 12,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        size: Math.random() * 8 + 4,
-        rot: Math.random() * 360,
-        vRot: (Math.random() - 0.5) * 10,
-      });
-    }
-
-    const startTime = performance.now();
-
-    const render = (time: number) => {
-      const elapsed = time - startTime;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      particles.forEach((p) => {
-        p.x += p.vx;
-        p.y += p.vy;
-        p.vy += 0.25;
-        p.rot += p.vRot;
-
-        ctx.save();
-        ctx.translate(p.x, p.y);
-        ctx.rotate((p.rot * Math.PI) / 180);
-        ctx.fillStyle = p.color;
-        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
-        ctx.restore();
-      });
-
-      if (elapsed < 1600) {
-        requestAnimationFrame(render);
-      } else {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-      }
-    };
-
-    requestAnimationFrame(render);
   };
 
   const optionLabels = ['A', 'B', 'C', 'D'];

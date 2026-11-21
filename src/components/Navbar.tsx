@@ -41,6 +41,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGame, isAppLoading = false
   const navLinks = [
     { label: 'Fitur', href: '#fitur' },
     { label: 'Cara Kerja', href: '#cara-kerja' },
+    { label: 'FAQ', href: '#faq' },
+    { label: 'Unduh', href: '#unduh' },
   ];
 
   const handleGameClick = (e: React.MouseEvent) => {

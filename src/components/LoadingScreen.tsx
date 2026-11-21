@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { 
   Award, 
   Timer, 
@@ -28,13 +28,13 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
     return 'Meja belajar siap. Selamat datang di Stoodify!';
   };
 
-  const handleDismiss = () => {
+  const handleDismiss = useCallback(() => {
     setIsExiting(true);
     setTimeout(() => {
       setIsDismissed(true);
       if (onComplete) onComplete();
     }, 650);
-  };
+  }, [onComplete]);
 
   // Keyboard shortcut: Space, Enter, or Escape to skip immediately
   useEffect(() => {
@@ -45,7 +45,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [handleDismiss]);
 
   // Organic progress bar increment (~1.7 seconds total)
   useEffect(() => {
